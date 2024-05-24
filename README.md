@@ -15,6 +15,16 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## Type check during development
+
+We add [type hints](https://docs.python.org/3/library/typing.html) in the code so use this
+to ensure you comply:
+
+```bash
+mypy --install-types
+mypy render.py
+```
+
 ## How to use it
 
 After installation, add some markdown files to the current directory and do this:

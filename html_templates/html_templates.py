@@ -1,4 +1,6 @@
-def get_html_template(content):
+import typing
+
+def get_html_template(content: str) -> str:
     return f"""
     <!DOCTYPE html>
     <html lang="en">
@@ -74,7 +76,7 @@ def get_html_template(content):
     </html>
     """
 
-def get_collapsible_script():
+def get_collapsible_script() -> str:
     return """
     document.addEventListener("DOMContentLoaded", function() {
         const headers = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
@@ -123,7 +125,7 @@ def get_collapsible_script():
     });
     """
 
-def get_search_script():
+def get_search_script() -> str:
     return """
     document.addEventListener("DOMContentLoaded", function() {
         const searchBar = document.getElementById('searchBar');
